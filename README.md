@@ -60,25 +60,29 @@ git clone <https://github.com/yesvanthraja/CNN-ocr.git>
 2. Install the necessary Python packages using the provided requirements.txt file
 `pip install -r requirements.txt`
 
-3. ## Training the Model
+3. Training the Model
 To train the OCR model, you'll need a dataset of images with corresponding text annotations. This project uses a CSV file, handwritten_data.csv, which contains paths to images and their annotations.
 
 Run the following command to start the training process:
-`python train.py --az handwritten_data.csv --model ocrmodel/ocr.keras`
-
-## Arguments:
---az: Path to the annotations CSV file.
---model: Path where the trained model should be saved.
+```bash
+python train.py --az handwritten_data.csv --model ocrmodel/ocr.keras
+```
+- Arguments:
+- --az: Path to the annotations CSV file.
+- --model: Path where the trained model should be saved.
 This script will train the OCR model using the specified dataset and save the trained model to the provided path.
 
-4. ## Testing the Model
+4. Testing the Model
 After training, you can test the OCR model on new images to recognize handwritten text.
 
 To test the model, use the following command:
-`python test.py --model ocrnew.h5 --image images/sample_img1.jpeg`
-Arguments:
---model: Path to the trained OCR model file.
---image: Path to the image file on which OCR detection should be performed.
+```bash
+python test.py --model ocrnew.h5 --image images/sample_img1.jpeg
+```
+
+- Arguments:
+- --model: Path to the trained OCR model file.
+- --image: Path to the image file on which OCR detection should be performed.
 This command will output the recognized text from the provided image using the trained OCR model.
 
 
