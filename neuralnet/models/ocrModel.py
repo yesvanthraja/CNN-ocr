@@ -12,7 +12,7 @@ class OCRModel:
         Constructs a neural network.
 
         Args:
-            data (K.Tensor): Input tensor.
+            data (Tensor): Input tensor.
             filters (int): Number of filters in the convolutional layers.
             stride (Tuple[int, int]): Stride of the convolutional layers.
             chanDim (int): Channel dimension index.
