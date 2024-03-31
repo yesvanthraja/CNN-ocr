@@ -58,7 +58,9 @@ git clone <https://github.com/yesvanthraja/CNN-ocr.git>
 ```
 
 2. Install the necessary Python packages using the provided requirements.txt file
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt`
+```
 
 3. Training the Model
 To train the OCR model, you'll need a dataset of images with corresponding text annotations. This project uses a CSV file, handwritten_data.csv, which contains paths to images and their annotations.
