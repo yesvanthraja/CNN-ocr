@@ -101,7 +101,7 @@ if __name__ == "__main__":
     ap.add_argument("-p", "--plot", type=str, default="plot.png", help="path to output training history file")
     args = vars(ap.parse_args())
 
-    EPOCHS = 10
+    EPOCHS = 50
     BATCH_SIZE = 128
 
     print("[INFO] loading datasets...")

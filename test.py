@@ -6,7 +6,7 @@ import imutils
 import cv2
 import tensorflow as tf
 from imutils.contours import sort_contours
-
+import os
 
 def extract_sentence_from_image(image_path, model_path):
     print("[INFO] loading handwriting OCR model...")
@@ -20,10 +20,10 @@ def extract_sentence_from_image(image_path, model_path):
     cnts = imutils.grab_contours(cnts)
     cnts = sort_contours(cnts, method="top-to-bottom")[0]
     chars = []
-
     prev_y = None
     line = []
 
+    # plot the contours and bounding boxes
     for c in cnts:
         (x, y, w, h) = cv2.boundingRect(c)
         if (w >= 5 and w <= 150) and (h >= 15 and h <= 120):
@@ -42,25 +42,19 @@ def extract_sentence_from_image(image_path, model_path):
             padded = padded.astype("float32") / 255.0
             padded = np.expand_dims(padded, axis=-1)
             chars.append((padded, (x, y, w, h)))
-
             if prev_y is None or abs(y - prev_y) < h:
                 line.append((padded, (x, y, w, h)))
             else:
                 chars.append(line)
                 line = [(padded, (x, y, w, h))]
-
             prev_y = y
-    
     labelNames = "0123456789"
     labelNames += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     labelNames = [l for l in labelNames]
-
     if line:
         chars.append(line)
-
     extracted_text = []
-
-    for line in chars:
+    for line_idx, line in enumerate(chars):
         if isinstance(line, list): 
             line_text = ""
             prev_x = None
@@ -73,13 +67,18 @@ def extract_sentence_from_image(image_path, model_path):
                 print("[INFO] {} - {:.2f}%".format(label, prob * 100))
                 if prev_x is not None and x - prev_x > w:
                     line_text += " "  
-
                 line_text += label  
                 cv2.rectangle(output_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 cv2.putText(output_image, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
                 prev_x = x
             extracted_text.append(line_text)
+            
+    output_dir = "output_ocr_images"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    output_filename = os.path.join(output_dir, f"{os.path.splitext(os.path.basename(image_path))[0]}.jpg")
+    cv2.imwrite(output_filename, output_image)
 
     return extracted_text, output_image
 
@@ -92,6 +91,6 @@ if __name__ == "__main__":
     args = vars(ap.parse_args())
 
     extracted_sentence, output_image = extract_sentence_from_image(args["image"], args["model"])
-    print("Extracted Sentence:\n", extracted_sentence)
+    print("Extracted text:\n", extracted_sentence)
     cv2.imshow("OCR Results", output_image)
     cv2.waitKey(0)

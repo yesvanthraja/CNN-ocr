@@ -15,9 +15,6 @@ def load_og_data(data_path):
     labels = np.array(labels, dtype="int")
     return (data, labels)
 
-
-
-
 def load_mnist_data():
 	((trainData, trainLabels), (testData, testLabels)) = mnist.load_data()
 	data = np.vstack([trainData, testData])

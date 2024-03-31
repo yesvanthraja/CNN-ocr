@@ -22,7 +22,7 @@ class OCRModel:
             bnMom (float): Batch normalization momentum. Defaults to 0.9.
 
         Returns:
-            K.Tensor: Output tensor of the normalization module.
+            Tensor: Output tensor of the neural net module.
         """
         shortcut = data
         bnorm1 = BatchNormalization(axis=chanDim, epsilon=bnEps, momentum=bnMom)(data)
