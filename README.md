@@ -1,4 +1,4 @@
-# OCR Model Architecture Explanation
+# OCR Model Architecture 
 
 The model architecture is designed to perform BatchNormalization over the image and leveraging convolutional neural networks to process and understand the contents of an image at various levels of abstraction.
 
