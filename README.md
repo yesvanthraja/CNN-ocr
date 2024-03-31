@@ -51,7 +51,7 @@ To utilize this OCR model, follow the steps below for setting up your environmen
 1. Clone the repository to your local machine:
 
 ```bash
-git clone <https://github.com/yesvanthraja/CNN-ocr.git>
+git clone https://github.com/yesvanthraja/CNN-ocr.git
 ```
 
 2. Install the necessary Python packages using the provided requirements.txt file
