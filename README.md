@@ -12,9 +12,7 @@ Please check the `output_ocr_images` folder to view the OCR extracted images.
 ![GSOC-ocr-architechture-latest](https://github.com/yesvanthraja/CNN-ocr/assets/68420593/3fd3553e-aeff-455e-902f-dfb446f323b1)
 
 ### Model breakdown for explanation
-<img width="713" alt="image" src="https://github.com/yesvanthraja/CNN-ocr/assets/68420593/89460833-c4a8-4687-8103-fafffcdd25dd">  &darr;
-<img width="719" alt="image" src="https://github.com/yesvanthraja/CNN-ocr/assets/68420593/db89b8bf-c587-4d5f-befd-561e4eaf688a">  &darr;
-<img width="533" alt="image" src="https://github.com/yesvanthraja/CNN-ocr/assets/68420593/7251cbef-f154-4cff-b4e5-4f7d505d5377">
+<img width="713" alt="image" src="https://github.com/yesvanthraja/CNN-ocr/assets/68420593/89460833-c4a8-4687-8103-fafffcdd25dd">  &rarr; <img width="719" alt="image" src="https://github.com/yesvanthraja/CNN-ocr/assets/68420593/db89b8bf-c587-4d5f-befd-561e4eaf688a"> &rarr; <img width="533" alt="image" src="https://github.com/yesvanthraja/CNN-ocr/assets/68420593/7251cbef-f154-4cff-b4e5-4f7d505d5377">
 
                                                
 
