@@ -66,31 +66,31 @@ Please check the `output_ocr_images` folder to view the OCR extracted images.
 
 
 ## Evaluation
-Word Error Rate (WER)
-Word Error Rate measures the difference between the recognized text and the ground truth text. It is calculated as the ratio of the total number of insertions, deletions, and substitutions required to convert the recognized text into the ground truth text, to the total number of words in the ground truth text.
+### Word Error Rate (WER)
+- Word Error Rate measures the difference between the recognized text and the ground truth text. It is calculated as the ratio of the total number of insertions, deletions, and substitutions required to convert the recognized text into the ground truth text, to the total number of words in the ground truth text.
 
 The formula for calculating WER is as follows: Where:
-WER = (S + D + I) / N
-I = Number of insertions (words present in ground truth but not in recognized text)
-D = Number of deletions (words present in recognized text but not in ground truth)
-S = Number of substitutions (words in recognized text that are different from words in ground truth)
-N = Total number of words in ground truth
+- WER = (S + D + I) / N
+- I = Number of insertions (words present in ground truth but not in recognized text)
+- D = Number of deletions (words present in recognized text but not in ground truth)
+- S = Number of substitutions (words in recognized text that are different from words in ground truth)
+- N = Total number of words in ground truth
 
-Input image -> sample_img1.jpeg
-S = 0 (substitution)
-D = 0 (deletion)
-I = 0 (insertion)
-N = Total number of words in the original text = 4
-Word error rate = 0+0+0/4 = 0
+1. Input image -> sample_img1.jpeg
+- S = 0 (substitution)
+- D = 0 (deletion)
+- I = 0 (insertion)
+- N = Total number of words in the original text = 4
+- Word error rate = 0+0+0/4 = 0 %
 
-Input image -> sample_img2.jpeg
-S = 1 (substitution)
-D = 0 (deletion)
-I = 0 (insertion)
-N = Total number of words in the original text = 5
-Word error rate = 1+0+0/11 ~ 9 %
+2. Input image -> sample_img2.jpeg
+- S = 1 (substitution)
+- D = 0 (deletion)
+- I = 0 (insertion)
+- N = Total number of words in the original text = 5
+- Word error rate = 1+0+0/11 ~ 9 %
 
-SO based on the Word Error Rate we can evaluate our model.
+So based on the Word Error Rate we can evaluate our model.
 
 ## Installation
 
