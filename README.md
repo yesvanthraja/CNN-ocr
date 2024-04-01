@@ -83,7 +83,7 @@ The formula for calculating WER is as follows: Where:
 - D = 0 (deletion)
 - I = 0 (insertion)
 - N = Total number of words in the original text = 4
-- Word error rate = 0+0+0/4 = 0 %
+- Word error rate = 0+0+0/4 = 0
 
 2. Input image -> sample_img2.jpeg
 `original_text = ['H U M A N A I G S O C']`
@@ -92,7 +92,7 @@ The formula for calculating WER is as follows: Where:
 - D = 0 (deletion)
 - I = 0 (insertion)
 - N = Total number of words in the original text = 5
-- Word error rate = 1+0+0/11 ~ 9 %
+- Word error rate = 1+0+0/11 ~ 9
 
 So based on the Word Error Rate we can evaluate our model.
 
