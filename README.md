@@ -77,6 +77,8 @@ The formula for calculating WER is as follows: Where:
 - N = Total number of words in ground truth
 
 1. Input image -> sample_img1.jpeg
+`original_text = ['G S O C']`
+`extracted_text = ['G S O C']`
 - S = 0 (substitution)
 - D = 0 (deletion)
 - I = 0 (insertion)
@@ -84,6 +86,8 @@ The formula for calculating WER is as follows: Where:
 - Word error rate = 0+0+0/4 = 0 %
 
 2. Input image -> sample_img2.jpeg
+`original_text = ['H U M A N A I G S O C']`
+`extracted_text = ['H U M A N AOI G S O C']`
 - S = 1 (substitution)
 - D = 0 (deletion)
 - I = 0 (insertion)
