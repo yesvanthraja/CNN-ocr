@@ -113,7 +113,7 @@ git clone https://github.com/yesvanthraja/CNN-ocr.git
 
 2. Install the necessary Python packages using the provided requirements.txt file
 ```bash
-pip install -r requirements.txt`
+pip install -r requirements.txt
 ```
 
 3. Training the Model
