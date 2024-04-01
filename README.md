@@ -2,7 +2,15 @@
 
 The model architecture is designed to perform BatchNormalization over the image and leveraging convolutional neural networks to process and understand the contents of an image at various levels of abstraction.
 
+## Note
+
+Please check the `output_ocr_images` folder to view the OCR extracted images.
+
 ## Neural Network Module (`nn` method)
+
+### Model Architecture 
+![GSOC-ocr-architechture-latest](https://github.com/yesvanthraja/CNN-ocr/assets/68420593/3fd3553e-aeff-455e-902f-dfb446f323b1)
+
 
 ### Parameters:
 - `data`: Input tensor of shape `(batch_size, height, width, channels)` that represents the input images represents the output of the previous layer in the neural network.
