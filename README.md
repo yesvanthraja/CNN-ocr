@@ -8,7 +8,7 @@ Please check the `output_ocr_images` folder to view the OCR extracted images.
 
 ## Neural Network Module (`nn` method)
 
-### Overall Model Architecture 
+### Overall Model Architecture  
 ![GSOC-ocr-architechture-latest](https://github.com/yesvanthraja/CNN-ocr/assets/68420593/3fd3553e-aeff-455e-902f-dfb446f323b1)
 
 ### Model breakdown for explanation
